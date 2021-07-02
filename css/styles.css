@@ -13,7 +13,7 @@
   --company-color: #afb1b8;
   --batton-form-color: #188ce8;
 }
-/* универсальный селектор */
+/* universal selector */
 * {
   margin: 0;
   padding: 0;
@@ -23,27 +23,33 @@
 header {
   border-bottom: 1px solid #ececec;
 }
-/* свойства body */
+
+/* properties body */
+
 body {
   font-family: Roboto;
   font-style: normal;
   color: var(--main-color);
   background-color: var(--white-color);
 }
-/* свойства изображений */
+/* properties images */
 img {
   display: block;
   max-width: 100%;
   height: auto;
 }
-/* контейнер */
+
+/* container */
+
 .container {
   box-sizing: border-box;
   width: 1200px;
   margin: 0 auto;
   padding: 0 15px;
 }
-/* фон хедера */
+
+/* background header */
+
 .header {
   background-color: var(--white-color);
 }
@@ -100,7 +106,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--title-color);
 }
-.contacts-head {
+.navigation__contacts-head {
   display: flex;
   align-items: center;
   margin-left: 305px;
@@ -108,11 +114,11 @@ img {
   width: 333px;
 }
 
-.navigation__site-nav .link.active {
+.navigation__site-nav .navigation--active {
   color: var(--color-logo-links);
   position: relative;
 }
-.active::after {
+.navigation--active::after {
   display: block;
   content: "";
   position: absolute;
@@ -123,22 +129,22 @@ img {
   border-radius: 2px;
   color: var(--color-logo-links);
 }
-.active:hover::after {
+.navigation--active:hover::after {
   opacity: 1;
   background-color: var(--color-logo-links);
 }
-.active {
+.navigation--active {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
     background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-head li:not(:last-child) {
+.navigation__contacts-head li:not(:last-child) {
   margin-right: 30px;
 }
 
-/* свойства ссылок контактов */
+/* contact link properties */
 
-.contacts-head .link {
+.navigation__contacts-head .link {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -147,18 +153,19 @@ img {
   letter-spacing: 0.02em;
   color: var(--main-color);
 }
-.contacts-icon-mail {
+.navigation__icon-mail {
   width: 16px;
   height: 12px;
   margin-right: 10px;
   fill: currentColor;
 }
-.contacts-icon-phone {
+.navigation__icon-phone {
   width: 10px;
   height: 16px;
   margin-right: 10px;
   fill: currentColor;
 }
+
 /* общие свойства ссылок */
 
 .link {
