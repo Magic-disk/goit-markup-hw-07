@@ -204,7 +204,7 @@ img {
     ),
     url(../images/Overlay.jpg);
 }
-.title {
+.hero__title {
   font-family: Roboto;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -219,7 +219,7 @@ img {
 }
 
 /* кнопка заказа услуги */
-.hero-btn {
+.hero__btn {
   margin: 0 auto;
   border: none;
   border-radius: 4px;
