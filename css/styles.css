@@ -61,7 +61,8 @@ img {
   justify-content: space-between;
 }
 /* logo */
-.logo {
+
+.navigation__logo {
   font-style: normal;
   letter-spacing: 0.03em;
   font-family: Raleway;
@@ -72,7 +73,7 @@ img {
   width: 145px;
   margin-right: 93px;
 }
-.logo-web {
+.navigation__logo-web {
   font-family: Raleway;
   font-style: normal;
   font-weight: bold;
@@ -81,16 +82,16 @@ img {
   letter-spacing: 0.03em;
   color: var(--color-logo-links);
 }
-.site-nav {
+.navigation__site-nav {
   display: flex;
   justify-content: space-between;
 }
 
-.site-nav li:not(:first-child) {
+.navigation__site-nav li:not(:first-child) {
   margin-left: 50px;
 }
 
-.site-nav .link {
+.navigation__site-nav .link {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -107,7 +108,7 @@ img {
   width: 333px;
 }
 
-.site-nav .link.active {
+.navigation__site-nav .link.active {
   color: var(--color-logo-links);
   position: relative;
 }
