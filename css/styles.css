@@ -793,7 +793,7 @@ img {
 
 /* modal window */
 
-.backdrop {
+.window {
   position: fixed;
   top: 0;
   left: 0;
@@ -801,11 +801,13 @@ img {
   height: 100%;
   background: rgba(0, 0, 0, 0.2);
 }
-.backdrop.is-hidden {
+.window {
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.window.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
-
 .modal {
   position: absolute;
   top: 50%;
@@ -819,12 +821,12 @@ img {
   border-radius: 4px;
   padding: 40px 39px 28px 41px;
 }
-.modal-close-icon {
+.window__icon {
   width: 18px;
   height: 18px;
   fill: currentColor;
 }
-.modal-close {
+.window__modal-close {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -840,8 +842,8 @@ img {
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close:hover,
-.modal-close:focus {
+.window__modal-close:hover,
+.window__modal-close:focus {
   border-color: var(--color-logo-links);
   color: var(--color-logo-links);
 }
@@ -851,17 +853,14 @@ img {
   pointer-events: none;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.backdrop {
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* modal form */
 
-.data {
+.window__form {
   width: 100%;
 }
 
-.form-title {
+.window__title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -870,7 +869,7 @@ img {
   color: var(--title-color);
 }
 
-.form-mark {
+.window__mark {
   font-size: 12px;
   line-height: 1.166;
   letter-spacing: 0.01em;
@@ -879,12 +878,12 @@ img {
   color: var(--main-color);
 }
 
-.form-line {
+.window__line {
   position: relative;
   margin-bottom: 10px;
 }
 
-.form-value {
+.window__value {
   display: block;
   width: 100%;
   height: 40px;
@@ -896,10 +895,14 @@ img {
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form-value:hover,
-.form-value:focus {
+.window__value:hover,
+.window__value:focus {
   border: 1px solid var(--color-logo-links);
   outline-color: var(--color-logo-links);
+}
+.window__value:hover + .form-icon,
+.window__value:focus + .form-icon {
+  fill: var(--color-logo-links);
 }
 
 .form-icon {
@@ -909,11 +912,6 @@ img {
   transform: translateY(-50%);
   fill: var(--title-color);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.form-value:hover + .form-icon,
-.form-value:focus + .form-icon {
-  fill: var(--color-logo-links);
 }
 
 .form-comment {
